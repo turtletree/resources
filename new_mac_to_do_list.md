@@ -5,8 +5,10 @@
   * Look up & data detectors: Tap with three fingers
   * Tap to click: tick
   * Tracking speed: Fast
-* Accessibility
-  * Point control - Trackpad Options - Eable dragging: three finger drag 
+* Accessibility - Point control - Trackpad Options - Eable dragging: three finger drag 
+  * for three finger drag
+* Keyboard - Shortcuts - Use keyboard navigation to move focus between controls: tick
+  * this is to use **tab** to choose between dialogue box buttons
 
 ## Dev Essentials
 ### Homebrew
