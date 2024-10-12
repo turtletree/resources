@@ -7,7 +7,8 @@
   * Tracking speed: Fast
 * Accessibility - Point control - Trackpad Options - Eable dragging: three finger drag 
   * for three finger drag
-* Keyboard - Shortcuts - Use keyboard navigation to move focus between controls: tick
+* Keyboard - Keyboard navigation: tick
+  * "Use keyboard navigation to move focus between controls. Press the Tab key to move focus forward and Shift Tab to move focus backward.
   * this is to use **tab** to choose between dialogue box buttons
 
 ## Dev Essentials
