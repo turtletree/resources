@@ -23,11 +23,17 @@ git version 2.39.3 (Apple Git-146)
 See [reference](https://www.freecodecamp.org/news/install-xcode-command-line-tools/).
 
 ### Homebrew
-Homebrew official installation doc: https://docs.brew.sh/Installation
-1. `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
-    * if shows something like `fetching orgin failed`, abort the session and open a new terminal to try again
-    * along this process, expect to enter your laptop admin password about 5 times
-2. `brew -v`
+1. `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
+    * if failed, check the most up to date command on its official doc: https://brew.sh/
+    * This will automatically install zsh and use it as default shell
+2.  Add Homebrew to your PATH:
+    ```
+    echo >> ~/.zprofile
+    echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+    ```
+3. `brew -v`
+
 
 ### iTerm2 and oh-my-zsh
 This guys's reference: https://catalins.tech/improve-mac-terminal.
@@ -37,24 +43,31 @@ oh-my-zsh github repo and README: https://github.com/ohmyzsh/ohmyzsh
 1. install zsh `brew install zsh` , `zsh --version`
 2. change default shell to zsh if needed `chsh -s /bin/zsh`
 3. install iterm2 `brew install --cask iterm2`
-4. iTerm2 > Preferences > Profiles > Colors > Color Presets -> Tango Light
+4. iTerm2 > Settings > Profiles > Colors > Color Presets -> Tango Light
 5. install oh-my-zsh `sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
 6. change zsh home directory before proceeding on installing plugins `export ZSH="$HOME/.oh-my-zsh"`
 
-#### oh-my-zsh handy plugins
-https://gist.github.com/dogrocker/1efb8fd9427779c827058f873b94df95
-* auto suggestion: `git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH/custom/plugins/zsh-autosuggestions`
-* syntax highlight: `git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH/custom/plugins/zsh-syntax-highlighting`
+#### [oh-my-zsh handy plugins](https://gist.github.com/dogrocker/1efb8fd9427779c827058f873b94df95)
+1. Run command anywhere to download the plugins into ZSH's own directory
+   ```
+   # auto suggestion
+   git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH/custom/plugins/zsh-autosuggestions
+ 
+   # syntax highlight
+   git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH/custom/plugins/zsh-syntax-highlighting
+   ``` 
+2. `vi ~/.zshrc` to check the current zsh config file and add the plugins
+   ```
+   plugins=(
+     git
+     zsh-autosuggestions 
+     zsh-syntax-highlighting
+     web-search
+   )
+   ```
+3. Exit and reopen iTerm2
 
-`vi ~/.zshrc` to check the current zsh config file
-```
-plugins=(
-  git
-  zsh-autosuggestions 
-  zsh-syntax-highlighting
-  web-search
-)
-```
+   
 ### Intellij
 Download Ultimate: https://www.jetbrains.com/idea/download/#section=mac
 
