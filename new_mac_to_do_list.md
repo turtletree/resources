@@ -8,17 +8,26 @@
 * Accessibility - Point control - Trackpad Options - Eable dragging: three finger drag 
   * for three finger drag
 * Keyboard - Keyboard navigation: tick
-  * "Use keyboard navigation to move focus between controls. Press the Tab key to move focus forward and Shift Tab to move focus backward.
+  * *Use keyboard navigation to move focus between controls. Press the Tab key to move focus forward and Shift Tab to move focus backward.*
   * this is to use **tab** to choose between dialogue box buttons
 
 ## Dev Essentials
+### Install Command Line Developer Tools & Git
+```
+~ % xcode-select --install # to trigger the prompt to install. It takes a few minutes.
+~ % xcode-select -p # to verify installation success
+/Library/Developer/CommandLineTools
+~ % git --version
+git version 2.39.3 (Apple Git-146)
+```
+See [reference](https://www.freecodecamp.org/news/install-xcode-command-line-tools/).
+
 ### Homebrew
 Homebrew official installation doc: https://docs.brew.sh/Installation
-1. Xcode command line tool if not already exist `xcode-select --install`
-2. `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
+1. `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
     * if shows something like `fetching orgin failed`, abort the session and open a new terminal to try again
     * along this process, expect to enter your laptop admin password about 5 times
-3. `brew -v`
+2. `brew -v`
 
 ### iTerm2 and oh-my-zsh
 This guys's reference: https://catalins.tech/improve-mac-terminal.
@@ -46,7 +55,6 @@ plugins=(
   web-search
 )
 ```
-
 ### Intellij
 Download Ultimate: https://www.jetbrains.com/idea/download/#section=mac
 
